@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<section id="page1" class="active">
+  <div class="container">
+    <h1>Hey Soumya❤️</h1>
+    <h2>Will you be my Valentine? 💌</h2>
+    <div class="buttons">
+      <button id="yesBtn">Yes 💕</button>
+      <button id="noBtn">No 😢</button>
+    </div>
+  </div>
+</section>
+
+<!-- ONE-TIME WHISPER FLOAT -->
+<div class="whisper" id="whisper">I know it my Princess ✨</div>
+
+<!-- PAGE 2 -->
+<section id="page2">
+  <div class="wrapper">
+
+    <h1>For You ❤️</h1>
+    <p class="subtitle">Every day with you is special</p>
+
+    <!-- DATES -->
+    <div class="grid">
+      <div class="card" data-day="7">🌹<span>7 · Rose Day</span></div>
+      <div class="card" data-day="8">💍<span>8 · Propose Day</span></div>
+      <div class="card" data-day="9">🍫<span>9 · Chocolate Day</span></div>
+      <div class="card" data-day="10">🧸<span>10 · Teddy Day</span></div>
+      <div class="card" data-day="11">🤝<span>11 · Promise Day</span></div>
+      <div class="card" data-day="12">💋<span>12 · Kiss Day</span></div>
+      <div class="card" data-day="13">🤗<span>13 · Hug Day</span></div>
+      <div class="card special" data-day="14">❤️<span>14 · Valentine’s Day</span></div>
+    </div>
+
+    <!-- SCROLL CONTENT -->
+    <div class="scroll-section">
+      <h2 class="soft-title">There’s something for you…</h2>
+
+      <div class="note">
+        If you ever feel like it,<br>
+        I’d love to spend some quiet time with you.
+      </div>
+
+      <div class="note">
+        Maybe a small virtual date —<br>
+        no pressure, just us 🫶
+      </div>
+
+      <div class="note">
+        🍿 Netflix party + video call<br>
+        🌙 Late night talks that turn into sleeping<br>
+        🎧 Playlist exchange & music talks<br>
+        📸 Send me your selfies so I can admire you<br>
+        🎮 Play games together & watch you destroy me
+      </div>
+
+      <!-- LETTER -->
+      <div class="letter-section">
+        <div class="envelope" id="openLetter">✉️</div>
+
+        <p class="letter-whisper" id="letterWhisper">
+          Whenever you feel ready… it’s here 🤍
+        </p>
+
+        <div class="letter" id="letter">
+          <p>
+            Hey BabyGurll...<br><br>
+
+            Somewhere between our talks and your laugh,
+            I started feeling this calm happiness.<br><br>
+
+            And honestly — I melt a little every time I look into your eyes. They make everything feel softer.<br><br>
+
+            I like the real you. The gentle, childish, emotional you.<br><br>
+            
+            I don’t want to rush anything.
+            I just want moments.Late talks. Shared music. Random laughs.<br><br>
+
+            This letter isn’t asking for anything. It’s just me saying — I’m really glad it’s you ❤️
+          </p>
+        </div>
+      </div>
+
+      <p class="final-line" id="finalLine">
+        Take your time. I’m not going anywhere 🤍
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DATE MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <p id="modalText"></p>
+    <button onclick="closeModal()">Close 💕</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
