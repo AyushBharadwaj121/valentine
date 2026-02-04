@@ -3,9 +3,17 @@ const page2 = document.getElementById("page2");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const whisper = document.getElementById("whisper");
+const noPrompt = document.getElementById("noPrompt");
 
 let noCount = 0;
 let whisperShown = false;
+
+const prompts = [
+  "Are you sure? 🥺",
+  "Just asking gently… 🤍",
+  "This button is getting shy 🙈",
+  "Okay… I’ll stop now 🙈"
+];
 
 yesBtn.addEventListener("click", () => {
   page1.classList.remove("active");
@@ -21,11 +29,25 @@ yesBtn.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("click", () => {
+  if (noCount < prompts.length) {
+    noPrompt.innerText = prompts[noCount];
+  }
+
   noCount++;
-  yesBtn.style.transform = `scale(${1 + noCount * 0.3})`;
-  noBtn.style.transform = `scale(${1 - noCount * 0.2})`;
-  if (noCount >= 3) noBtn.style.display = "none";
+
+  // YES grows gently
+  yesBtn.style.transform = `scale(${1 + noCount * 0.22})`;
+
+  // NO jumps to random positions
+  const x = Math.random() * 200 - 100; // left/right
+  const y = Math.random() * 150 - 75;  // up/down
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+
+  if (noCount === 4) {
+    noBtn.style.display = "none";
+  }
 });
+
 
 /* DATE MODAL */
 const modal = document.getElementById("modal");
@@ -37,7 +59,7 @@ const messages = {
   9: "If I was with you today,\nwe’d share chocolate and laugh over nothing 🍫",
   10: "If I was with you,\nI’d hug you tight 🧸",
   11: "If I was with you,\nI’d promise to be there 🤝",
-  12: "If I was with you,\nI’d give you the softest kiss 💋",
+  12: "If I was with you right now,\na forehead kiss that says ‘it’s okay now’ 🤍",
   13: "If I was with you,\nI’d hug you a little longer 🤗",
   14: "It’s not just Valentine’s Day…\nIt’s a day I’m glad it’s you ❤️ ❤️"
 };
